@@ -25,6 +25,35 @@
         <button class="order-btn">Order Now</button>
       </div>
 
+      <!-- Modal for Order Form -->
+<div id="orderModal" class="order-modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeOrderForm()">&times;</span>
+      <h2>Place Your Order</h2>
+      <form id="orderForm" method="POST" action="/submit_order">
+          <label for="paymentMethod">Preferred Payment Method:</label>
+          <select id="paymentMethod" name="paymentMethod">
+              <option value="paypal">PayPal</option>
+              <option value="creditCard">Credit Card</option>
+              <option value="bankTransfer">Bank Transfer</option>
+          </select>
+
+          <label for="deliveryLocation">Delivery Location:</label>
+          <select id="deliveryLocation" name="deliveryLocation">
+              <option value="cityA">City A</option>
+              <option value="cityB">City B</option>
+              <option value="cityC">City C</option>
+          </select>
+
+          <label for="paymentOption">Payment Option:</label>
+          <input type="radio" id="payNow" name="paymentOption" value="payNow"> Pay Now
+          <input type="radio" id="payOnDelivery" name="paymentOption" value="payOnDelivery"> Pay on Delivery
+
+          <button type="submit">Submit Order</button>
+      </form>
+  </div>
+</div>
+
       <!-- Product 2 -->
       <div class="product">
         <img src="images/panel.jpg" alt="Solar Panel">
